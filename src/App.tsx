@@ -1,20 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Abc } from '@mui/icons-material';
-import { Button } from '@mui/material';
-import { useState } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './config/routes';
+import { CssBaseline } from '@mui/material';
 
-export default function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
   return (
     <div>
-      <h1>Vite + React</h1>
-      <Button
-        onClick={() => setCount((count) => count + 1)}
-        variant="contained"
-      >
-        Hello world {count}
-      </Button>
-      <Abc />
+      <CssBaseline />
+      <RouterProvider router={router} />
     </div>
   );
-}
+};
+export default App;
