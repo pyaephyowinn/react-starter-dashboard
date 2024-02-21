@@ -19,7 +19,14 @@ const RootLayout = () => {
 
   return (
     <>
-      <AppBar position="fixed" elevation={0}>
+      <AppBar
+        position="fixed"
+        color="transparent"
+        elevation={0}
+        sx={{
+          paddingLeft: `${isMobile ? 0 : drawerWidth}px`,
+        }}
+      >
         <Container
           maxWidth="xl"
           sx={{
